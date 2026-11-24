@@ -1,0 +1,97 @@
+/* Explain: Site-wide styles, including background, typography, and responsive adjustments. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 96px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+}
+
+body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background-image:
+        linear-gradient(180deg, rgba(3, 9, 20, 0.28), rgba(3, 12, 24, 0.16) 45%, rgba(3, 9, 20, 0.34)),
+        url('../../../../../../files.cdn-files-a.com/uploads/12693263/normal_6b03bd0079ab9809f.avif?ratio=2:3&format=avif');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    pointer-events: none;
+}
+
+body::after {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image: radial-gradient(#6eeaff 1px, transparent 1px);
+    background-size: 34px 34px;
+    content: "";
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.particle-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-synthesis: style;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+button,
+select,
+label {
+    cursor: pointer;
+}
+
+.nav-link,
+.join-button,
+.ghost-button {
+    font-family: var(--font-heading);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: #02121d;
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+}
